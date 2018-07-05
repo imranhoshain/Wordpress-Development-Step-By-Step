@@ -12,7 +12,7 @@ get_header();
 
 <!-- 404 content section start -->
 <div class="error-header">
-	
+
 </div>
 
 <div class="error-content section-padding-bottom">
@@ -32,7 +32,6 @@ get_header();
 	</div>
 </div>
 <!-- 404 content section end -->
-
 
 <?php
 get_footer();
