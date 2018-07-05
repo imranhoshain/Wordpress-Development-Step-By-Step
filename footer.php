@@ -64,9 +64,7 @@ $footer_payment_options = cs_get_option('footer_bottom_right');
 									  }
 
 									}
-									?>		
-
-									
+									?>
 								</ul>
 							</div>
 						</div>
