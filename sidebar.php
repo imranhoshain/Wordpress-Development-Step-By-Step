@@ -7,11 +7,12 @@
  * @package rideo
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+if ( ! is_active_sidebar( 'blog_right_sidebar' ) ) {
 	return;
 }
 ?>
-
-<aside id="secondary" class="widget-area">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-</aside><!-- #secondary -->
+<div class="col-xs-12 col-sm-4 col-md-3">
+	<aside id="secondary" class="widget-area">
+		<?php dynamic_sidebar( 'blog_right_sidebar' ); ?>
+	</aside><!-- #secondary -->
+</div>
