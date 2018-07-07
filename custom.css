@@ -630,3 +630,48 @@ My Custom Woocommerce Css
 .sp-140{
     padding: 140px 0 0;
 }
+
+
+ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+
+.widget_categories li:first-child {
+    padding-top: 0;
+}
+
+.widget_categories li {
+    border-bottom: 1px solid #ebebeb;
+    float: none;
+    padding: 20px 0;
+        padding-top: 20px;
+}
+
+.widget_categories li a, .widget_categories li span {
+    color: #444;
+    font-family: roboto;
+    font-weight: 500;
+}
+
+.widget_categories li a, .widget_categories li span {
+    color: #444;
+    font-family: roboto;
+    font-weight: 500;
+}
+
+.widget_recent_entries{
+	margin-top: 40px;
+}
+.widget_recent_entries li, .widget_meta li, .widget_archive li {
+    margin-bottom: 8px;
+    display: block;
+}
+.left-sidebar li {
+    float: unset;
+}
+
+.sidebar-title > h3{
+	margin-bottom: 15px;
+}
