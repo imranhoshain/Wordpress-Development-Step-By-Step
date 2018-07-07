@@ -617,3 +617,12 @@ My Custom Woocommerce Css
 .error-header {
     margin-bottom: 140px;
 }
+
+.page-banner img {
+    width: 100%;    
+}
+
+.page-banner {
+    height: 200px;
+    overflow: hidden;
+}
