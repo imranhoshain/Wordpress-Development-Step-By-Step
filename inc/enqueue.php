@@ -17,7 +17,7 @@ function rideo_scripts() {
 	wp_enqueue_style( 'jquery-ui-style', get_template_directory_uri().'/assets/css/jquery-ui.min.css', array(), '1.0', 'all' );
 	wp_enqueue_style( 'rideo-default-style', get_template_directory_uri().'/assets/css/default.css', array(), '1.0', 'all' );
 	wp_enqueue_style( 'rideo-style', get_template_directory_uri().'/assets/css/style.css', array(), '1.0', 'all' );
-	wp_enqueue_style( 'rideo-woo-style', get_template_directory_uri().'/woocommerce.css', array(), '1.0', 'all' );
+	//wp_enqueue_style( 'rideo-woo-style', get_template_directory_uri().'/woocommerce.css', array(), '1.0', 'all' );
 	wp_enqueue_style( 'rideo-responsive', get_template_directory_uri().'/assets/css/responsive.css', array(), '1.0', 'all' );
 	wp_enqueue_style( 'rideo-theme-file', get_stylesheet_uri() );
 

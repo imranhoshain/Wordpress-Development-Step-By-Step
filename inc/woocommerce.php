@@ -29,7 +29,7 @@ add_action( 'after_setup_theme', 'rideo_woocommerce_setup' );
  * @return void
  */
 function rideo_woocommerce_scripts() {
-	wp_enqueue_style( 'rideo-woocommerce-style', get_template_directory_uri() . '/woocommerce.css' );
+	wp_enqueue_style( 'rideo-woocommerce-style', get_template_directory_uri() . '/custom.css' );
 
 	$font_path   = WC()->plugin_url() . '/assets/fonts/';
 	$inline_font = '@font-face {
