@@ -626,3 +626,7 @@ My Custom Woocommerce Css
     height: 200px;
     overflow: hidden;
 }
+
+.sp-140{
+    padding: 140px 0 0;
+}

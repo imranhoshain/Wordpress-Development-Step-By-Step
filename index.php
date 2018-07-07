@@ -68,7 +68,7 @@ get_header();
 		<section class="blog-area blog-two blog-margin section-padding">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12">
+					
 						<?php
 						if ( have_posts() ) :
 
@@ -101,7 +101,7 @@ get_header();
 
 						endif;
 						?>
-					</div>
+					
 				</div>
 			</div>
 		</section>
