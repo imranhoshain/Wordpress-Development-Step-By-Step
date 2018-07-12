@@ -44,17 +44,21 @@ get_header();
 		<!-- blog content section start -->
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12 col-sm-8 col-md-9">
-					<div class="single-blog-page">
+					<div class="<?php if( is_single() ) : ?>col-xs-12 col-sm-8 col-md-9<?php else : ?>col-sm-4<?php endif; ?>">
+				
 						<?php						
 							get_template_part( 'template-parts/content', get_post_type() );
-							the_post_navigation();
+							
+							$single_post_pagenation = cs_get_option('enable_single_post_pagination');
+
+							if($single_post_pagenation != false) {the_post_navigation(); }
+
 							// If comments are open or we have at least one comment, load up the comment template.
 							if ( comments_open() || get_comments_number() ) :
 								comments_template();
-							endif;						
+							endif;								
 						?>
-					</div>
+					
 				</div>
 				<?php get_sidebar(); ?>	
 			</div>

@@ -675,3 +675,62 @@ ul {
 .sidebar-title > h3{
 	margin-bottom: 15px;
 }
+.single-blog-img .post-thumbnail img {
+    width: 100%;
+}
+
+span.posted-on {
+    padding: 0px 5px;
+}
+
+.single-blog-page hr.line {
+    display: none;
+}
+.single-blog-page .blog-img img {
+    width: 100%;
+}
+
+.single-blog-page .blog-text > p{
+	padding: 0 !important;
+}
+blockquote{
+	border-left: none;
+}
+blockquote p{background: #ddd none repeat scroll 0 0;
+padding: 20px 30px;
+border-left: 3px solid #ff6600;}
+
+
+.about-author li {
+    display: block;
+    width: 100%;
+	overflow: hidden;
+}
+.comment-author > img {
+    float: left;
+    margin-right: 20px;
+    width: 100px;
+    margin-bottom: 20px;
+}
+.about-author li ul {
+    padding-left: 48px;
+}
+
+.submit-text {    
+    background: #fff;
+    border: 1px solid #ddd;
+}
+.submit-text:hover{
+    background: #ff6600 none repeat scroll 0 0;  
+
+    transition: all 0.3s ease 0s;
+   
+    color: #fff;
+    
+}
+
+.comment-respond {margin-top: 20px;}
+
+.comment-respond h3 {color: #1b1b1b;
+font-size: 20px;
+margin-bottom: 30px;}
