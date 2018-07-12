@@ -734,3 +734,17 @@ border-left: 3px solid #ff6600;}
 .comment-respond h3 {color: #1b1b1b;
 font-size: 20px;
 margin-bottom: 30px;}
+.wpcf7-form textarea{ 
+    width: 100% !important;
+    height:200px;
+}
+
+div.wpcf7 .ajax-loader{
+	margin: -10px;
+}
+.contact-input-text {
+    width: 100%;
+    margin: 10px 0;
+    padding: 6px 9px;
+    border: 1px solid#ddd;
+}
