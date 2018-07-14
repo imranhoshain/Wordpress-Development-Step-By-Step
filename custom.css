@@ -748,3 +748,56 @@ div.wpcf7 .ajax-loader{
     padding: 6px 9px;
     border: 1px solid#ddd;
 }
+
+
+/* Shop Page */
+
+.columns-3{
+	width: 100%;
+}
+.right li form {
+    height: 25px;
+    line-height: 26px;
+    margin: 5px -14px 8px;
+    position: relative;
+    padding-left: 10px;
+}
+.custom-select::after {    
+    right: -8px;   
+    top: 2px;
+    
+}
+select.orderby {
+    height: 35px;
+}
+.single-products ul li {
+    text-align: center;
+}
+
+.single-products ul li img {
+    width: 100%;
+}
+
+.custom-select select {    
+    padding: 3px 20px;    
+}
+.shop-menu .right p {    
+    margin-left: 10px;
+}
+
+.header-top .right input {
+	width: 80px}
+
+.right.floatright ul {
+    margin: 0px 15px;
+}
+
+.pagnation-ul li span.current {    
+    display: block;
+    background: #ddd;
+    padding: 5px 12px;
+}
+
+.pagnation-ul a {  
+    margin-right: 8px;
+}
