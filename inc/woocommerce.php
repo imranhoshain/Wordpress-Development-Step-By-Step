@@ -296,18 +296,13 @@ remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_l
 
 remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10 );
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50 );
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
 
 //Remove Action Function END//
 
  
 //Rideo_product_variation_color_brand
-add_action( 'woocommerce_single_product_summary', 'rideo_product_variation_color_brand_action', 30 ); 
-function rideo_product_variation_color_brand_action() {
-?>
-	
 
-<?php }
 
 //Product thumbnail function
 add_action( 'woocommerce_before_shop_loop_item_title', 'rideo_template_loop_product_thumbnail', 10 );

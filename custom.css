@@ -1027,4 +1027,22 @@ input[type="number"] {
 
 .variations_button.actions-btn {
     padding: 20px 0 0px 0;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.woocommerce-tabs .panel h2 {
+    display: none;
+}
+
+.pro-des-tab .tab-menu, .normal-tab .tab-menu {
+    display: inline-block;   
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+
+.woocommerce-tabs ul.tabs li {
+    margin-right: 40px;
 }
