@@ -7,8 +7,6 @@
 ************************************/
 	
 
-
- 
 	// jQuery MeanMenu
 	jQuery('nav#dropdown').meanmenu();
 

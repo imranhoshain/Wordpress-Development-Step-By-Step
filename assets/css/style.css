@@ -628,11 +628,12 @@ ul.mega-menu > li {
   left: -35px;
 }
 /* single products  */
-.product-item {
+
+/* .product-item {
     background: #f7f7f7 none repeat scroll 0 0;
     border: 1px solid #eee;
     padding: 20px;
-}
+} */
 .slick-slide img {display: inline-block;}
 .pro-img > a {display: block;}
 .actions-btn a i {
@@ -1248,8 +1249,7 @@ ul.mega-menu > li {
     background: #fff none repeat scroll 0 0;
     bottom: 20px;
     height: 40px;
-    line-height: 40px;
-    position: absolute;
+    line-height: 40px;    
     right: 20px;
     text-align: center;
     width: 40px;

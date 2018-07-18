@@ -76,7 +76,7 @@ get_header( 'shop' ); ?>
 
 <section class="product-details section-padding-top">
 	<div class="container">
-		<div class="row">
+		
 			<?php
 				/**
 				 * woocommerce_before_main_content hook.
@@ -101,7 +101,7 @@ get_header( 'shop' ); ?>
 				 */
 				do_action( 'woocommerce_after_main_content' );
 			?>
-		</div>
+		
 	</div>
 </section>
 

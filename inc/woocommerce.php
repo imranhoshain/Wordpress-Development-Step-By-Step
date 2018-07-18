@@ -17,9 +17,9 @@
  */
 function rideo_woocommerce_setup() {
 	add_theme_support( 'woocommerce' );
-	add_theme_support( 'wc-product-gallery-zoom' );
-	add_theme_support( 'wc-product-gallery-lightbox' );
-	add_theme_support( 'wc-product-gallery-slider' );
+	//add_theme_support( 'wc-product-gallery-zoom' );
+	//add_theme_support( 'wc-product-gallery-lightbox' );
+	//add_theme_support( 'wc-product-gallery-slider' );
 }
 add_action( 'after_setup_theme', 'rideo_woocommerce_setup' );
 
@@ -283,9 +283,65 @@ remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 //Remove Pagination
 remove_action( 'woocommerce_after_shop_loop', 'woocommerce_pagination', 10 );
 
-//remove_action( 'woocommerce_after_shop_loop', 'woocommerce_pagination', 10 );
+remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10 );
+
+remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+
+//Page Title Remove
+remove_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10 );
+remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
+remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
+
+//Single Page HOOK remove
+
+remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50 );
+
 //Remove Action Function END//
 
+ 
+//Rideo_product_variation_color_brand
+add_action( 'woocommerce_single_product_summary', 'rideo_product_variation_color_brand_action', 30 ); 
+function rideo_product_variation_color_brand_action() {
+?>
+	
+
+<?php }
+
+//Product thumbnail function
+add_action( 'woocommerce_before_shop_loop_item_title', 'rideo_template_loop_product_thumbnail', 10 );
+function rideo_template_loop_product_thumbnail() {?>
+    <div class="pro-img">
+			<a href="<?php the_permalink() ?>"><?php woocommerce_template_loop_product_thumbnail() ?></a>			
+			<div class="actions-btn">
+				<ul class="clearfix">
+					<li><?php woocommerce_template_loop_add_to_cart() ?></li>
+					<?php if (shortcode_exists( 'ti_wishlists_addtowishlist' )): ?>
+						<li>
+							<?php echo do_shortcode( '[ti_wishlists_addtowishlist]' ); ?>
+						</li>
+					<?php endif; ?>
+					<li>
+						<a href="#" data-toggle="modal" data-target="#quick-view"><i class="fa fa-eye"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+<?php }
+
+//Product title function
+add_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price_loop_rating', 10 );
+function woocommerce_template_loop_price_loop_rating() {?>
+    <div class="product-title">
+		<a href="<?php the_permalink() ?>"><h5><?php the_title() ?></h5></a>
+		<div class="ratting">
+			<?php woocommerce_template_loop_rating() ?>
+		</div>
+		<?php woocommerce_template_loop_price() ?>
+		<!-- <p><span>$1700.00</span><del>$170.00</del></p> -->
+	</div>
+<?php }
 
 
 /**
@@ -310,6 +366,7 @@ function rideo_woocommerce_catalog_orderby( $sortby ) {
 	unset($sortby['popularity']);
 	return $sortby;
 }
+
 
 /**
  * Change number or products per row to 3
@@ -351,7 +408,7 @@ function rideo_woocommerce_catalog_page_ordering() {
 			        $numberOfProductsPerPage = $_COOKIE['shop_pageResults'];
 			          }
 			 
-			//  This is where you can change the amounts per page that the user will use  feel free to change the numbers and text as you want, in my case we had 4 products per row so I chose to have multiples of four for the user to select.
+						//  This is where you can change the amounts per page that the user will use  feel free to change the numbers and text as you want, in my case we had 4 products per row so I chose to have multiples of four for the user to select.
 						$shopCatalog_orderby = apply_filters('woocommerce_sortby_page', array(
 						//Add as many of these as you like, -1 shows all products per page
 						  //  ''       => __('Results per page', 'rideo'),
@@ -396,3 +453,4 @@ $pages = paginate_links( array(
        echo '</ul></div>';
         }
 } 
+

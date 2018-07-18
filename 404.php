@@ -25,7 +25,7 @@ get_header();
 				<div class="error-text text-center">
 					<h3><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'rideo' ); ?></h3>
 					<p><?php esc_html_e( 'Please try one of the following page.', 'rideo' ); ?></p>
-					<a href="<?php get_template_directory_uri(); ?>">Return home</a>
+					<a href="<?php echo get_home_url(); ?>">Return home</a>
 				</div>
 			</div>
 		</div>
